@@ -13,7 +13,7 @@ def hello_world():
     user_id = request.args.get("id", "1")
     # Дефект №1: отраженная XSS.
     # Пользовательский ввод попадает в HTML без экранирования.
-    return f"<h1>Hello, user #{esacape(user_id)}!</h1>"
+    return f"<h1>Hello, user #{escape(user_id)}!</h1>"
 
 
 @app.route("/checksum")
